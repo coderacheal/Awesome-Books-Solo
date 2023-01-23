@@ -1,7 +1,7 @@
 const booksDiv = document.querySelector('.books');
 // const viewList = document.querySelector('.my-grid');
 
-export default class CreateNewBook {
+export class CreateNewBook {
   static addNewBook(book) {
     const bookUnit = document.createElement('li');
     bookUnit.className = 'books-li';

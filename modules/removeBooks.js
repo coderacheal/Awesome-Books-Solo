@@ -3,7 +3,7 @@ import { CreateNewBook } from './createNewBook.js';
 const booksDiv = document.querySelector('.books');
 const viewList = document.querySelector('.my-grid');
 
-export default class RemoveBook {
+export class RemoveBook {
   static removeBookFromPage(target) {
     if (target.classList.contains('removeBook')) {
       target.parentElement.remove();
