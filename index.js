@@ -1,19 +1,22 @@
 /* eslint-disable max-classes-per-file */
 import { Books } from "./modules/books.js";
+import { CreateNewBook } from "./modules/createNewBook.js";
+import { RemoveBook } from "./modules/removeBooks.js";
+import { DateTime } from "/node_modules/luxon/src/luxon.js";
+
+const date = DateTime.fromObject({ }, { zone: 'system'}).toLocaleString(DateTime.DATE_FULL)
+const time = DateTime.fromObject({ }, { zone: 'system'}).toLocaleString(DateTime.TIME_SIMPLE)
 const form = document.querySelector('.form');
-const booksDiv = document.querySelector('.books');
 const addNew = document.querySelector('.add-book');
+const booksDiv = document.querySelector('.books');
 const viewList = document.querySelector('.my-grid');
 const viewContact = document.querySelector('.contact-info');
 const listLink = document.querySelectorAll('.link-1');
 const AddLink = document.querySelectorAll('.link-2');
 const contactLink = document.querySelectorAll('.link-3');
 const dateContainer = document.querySelector('.date');
-const date = new Date().toLocaleDateString('en-us', { month: 'long', day: '2-digit', year: 'numeric' });
-const time = new Date().toLocaleTimeString('en-us', { hour: 'numeric', minute: '2-digit' });
-const dateTime = `${date} ${time}`;
 
-dateContainer.innerHTML = dateTime;
+dateContainer.innerHTML = `${date} ${time}`;
 
 listLink.forEach((link) => link.addEventListener('click', () => {
   viewList.style.display = 'flex';
@@ -34,65 +37,6 @@ contactLink.forEach((link) => link.addEventListener('click', () => {
 }));
 
 
-
-class CreateNewBook {
-  static addNewBook(book) {
-    const bookUnit = document.createElement('li');
-    bookUnit.className = 'books-li';
-    bookUnit.id = book.id;
-    bookUnit.innerHTML = `
-        <p class="book-name">${book.title}</p> 
-        <p>By</p>
-        <p class="the-auhtor">${book.author}</p>
-        <button class='removeBook'>Remove</button>
-        `;
-    booksDiv.appendChild(bookUnit);
-    booksDiv.style.border = '3px solid black';
-  }
-
-  static removeBookFromPage(target) {
-    if (target.classList.contains('removeBook')) {
-      target.parentElement.remove();
-    }
-
-    if (!booksDiv.firstElementChild) {
-      booksDiv.style.border = '3px solid white';
-    }
-  }
-
-  static loadFromStorage() {
-    let books;
-
-    if (localStorage.getItem('bookInfo')) {
-      books = JSON.parse(localStorage.getItem('bookInfo'));
-    } else {
-      books = [];
-    }
-
-    return books;
-  }
-
-  static displayBooksFromStorage() {
-    const books = CreateNewBook.loadFromStorage();
-
-    books.forEach((book) => {
-      CreateNewBook.addNewBook(book);
-    });
-  }
-
-  static removeBookFromStorage(element) {
-    const books = CreateNewBook.loadFromStorage();
-    const { id } = element.parentElement;
-    const index = books.findIndex((book) => book.id === id);
-    books.splice(index, 1);
-    localStorage.setItem('bookInfo', JSON.stringify(books));
-  }
-
-  static displayOnLoad() {
-    // if ()
-    viewList.style.display = 'flex';
-  }
-}
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -118,9 +62,9 @@ form.addEventListener('submit', (event) => {
 });
 
 booksDiv.addEventListener('click', (e) => {
-  CreateNewBook.removeBookFromPage(e.target);
-  CreateNewBook.removeBookFromStorage(e.target);
+  RemoveBook.removeBookFromPage(e.target);
+  RemoveBook.removeBookFromStorage(e.target);
 });
 
 window.addEventListener('load', CreateNewBook.displayBooksFromStorage());
-window.addEventListener('load', CreateNewBook.displayOnLoad());
+window.addEventListener('load', RemoveBook.displayOnLoad());
