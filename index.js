@@ -1,11 +1,11 @@
 /* eslint-disable max-classes-per-file */
-import { Books } from "./modules/books.js";
-import { CreateNewBook } from "./modules/createNewBook.js";
-import { RemoveBook } from "./modules/removeBooks.js";
-import { DateTime } from "/node_modules/luxon/src/luxon.js";
+import { Books } from './modules/books.js';
+import { CreateNewBook } from './modules/createNewBook.js';
+import { RemoveBook } from './modules/removeBooks.js';
+import { DateTime } from '../../../../../../node_modules/luxon/src/luxon.js';
 
-const date = DateTime.fromObject({ }, { zone: 'system'}).toLocaleString(DateTime.DATE_FULL)
-const time = DateTime.fromObject({ }, { zone: 'system'}).toLocaleString(DateTime.TIME_SIMPLE)
+const date = DateTime.fromObject({ }, { zone: 'system' }).toLocaleString(DateTime.DATE_FULL);
+const time = DateTime.fromObject({ }, { zone: 'system' }).toLocaleString(DateTime.TIME_SIMPLE);
 const form = document.querySelector('.form');
 const addNew = document.querySelector('.add-book');
 const booksDiv = document.querySelector('.books');
@@ -35,8 +35,6 @@ contactLink.forEach((link) => link.addEventListener('click', () => {
   viewList.style.display = 'none';
   addNew.style.display = 'none';
 }));
-
-
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
