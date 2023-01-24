@@ -6,7 +6,6 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
@@ -22,18 +21,16 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [Awesome_Books] <a name="Awesome_Books">Awesome_Books</a>
+# 📖 [Awesome-Books-Solo] <a name="Awesome-Books-Solo"></a>
 
 This is a Awesome-Books  project.
 "Awesome books" is a simple website that displays a list of books and allows you to add and remove books from that list.
 
-## 🛠 Built With <a name="built-with">Html, css, javascript</a>
-
 ### Tech Stack <a name="tech-stack">HTML5, CSS3 JAVASCRIPT</a>
 
--HTML
--CSS
--JAVASCRIPT
+- HTML
+- CSS
+- JAVASCRIPT
 
 
 ### Key Features <a name="key-features"></a>
@@ -84,7 +81,7 @@ npm test
 
 - GitHub [coderacheal] (https://github.com/coderacheal)
 
-
+## Future Features <a name="future-features"></a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
