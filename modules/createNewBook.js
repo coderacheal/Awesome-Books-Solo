@@ -1,5 +1,4 @@
 const booksDiv = document.querySelector('.books');
-// const viewList = document.querySelector('.my-grid');
 
 export default class CreateNewBook {
   static addNewBook(book) {
@@ -16,15 +15,3 @@ export default class CreateNewBook {
     booksDiv.style.border = '3px solid black';
   }
 }
-
-// export default const loadFromStorage = () => {
-//   let books;
-
-//   if (localStorage.getItem('bookInfo')) {
-//     books = JSON.parse(localStorage.getItem('bookInfo'));
-//   } else {
-//     books = [];
-//   }
-
-//   return books;
-// };

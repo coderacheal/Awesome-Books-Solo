@@ -1,6 +1,3 @@
-// import { CreateNewBook } from './createNewBook.js';
-// import { loadFromStorage  from './createNewBook.js';
-
 import loadFromStorage from './loadFromStorage.js';
 
 const booksDiv = document.querySelector('.books');
