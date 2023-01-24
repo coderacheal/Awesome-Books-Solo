@@ -1,8 +1,10 @@
 /* eslint-disable max-classes-per-file */
-import { Books } from './modules/books.js';
-import { CreateNewBook } from './modules/createNewBook.js';
-import { RemoveBook } from './modules/removeBooks.js';
-import { DateTime } from '../../../../../../node_modules/luxon/src/luxon.js';
+import Books from './modules/books.js';
+import CreateNewBook from './modules/createNewBook.js';
+import loadFromStorage from './modules/loadFromStorage.js';
+import { RemoveBook, removeBookFromStorage } from './modules/removeBooks.js';
+import { DateTime } from './node_modules/luxon/src/luxon.js';
+import displayBooksFromStorage from './modules/displayBooksFromStorage.js';
 
 const date = DateTime.fromObject({ }, { zone: 'system' }).toLocaleString(DateTime.DATE_FULL);
 const time = DateTime.fromObject({ }, { zone: 'system' }).toLocaleString(DateTime.TIME_SIMPLE);
@@ -42,7 +44,7 @@ form.addEventListener('submit', (event) => {
   const authorInput = document.querySelector('.book-author');
   const title = document.querySelector('.book-title').value;
   const author = document.querySelector('.book-author').value;
-  const books = CreateNewBook.loadFromStorage();
+  const books = loadFromStorage();
 
   if (!title || !author) {
     addNew.style.display = 'flex';
@@ -50,7 +52,7 @@ form.addEventListener('submit', (event) => {
     const book = new Books(title, author, Date.now());
     books.push(book);
     CreateNewBook.addNewBook(book);
-    CreateNewBook.loadFromStorage();
+    loadFromStorage();
 
     localStorage.setItem('bookInfo', JSON.stringify(books));
 
@@ -61,8 +63,8 @@ form.addEventListener('submit', (event) => {
 
 booksDiv.addEventListener('click', (e) => {
   RemoveBook.removeBookFromPage(e.target);
-  RemoveBook.removeBookFromStorage(e.target);
+  removeBookFromStorage(e.target);
 });
 
-window.addEventListener('load', CreateNewBook.displayBooksFromStorage());
+window.addEventListener('load', displayBooksFromStorage());
 window.addEventListener('load', RemoveBook.displayOnLoad());
