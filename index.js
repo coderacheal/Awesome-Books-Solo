@@ -3,7 +3,7 @@ import Books from './modules/books.js';
 import CreateNewBook from './modules/createNewBook.js';
 import loadFromStorage from './modules/loadFromStorage.js';
 import { RemoveBook, removeBookFromStorage } from './modules/removeBooks.js';
-import { DateTime } from '../modules/src/luxon.js';
+import { DateTime } from '../modules/luxon.js';
 import displayBooksFromStorage from './modules/displayBooksFromStorage.js';
 
 const date = DateTime.fromObject({ }, { zone: 'system' }).toLocaleString(DateTime.DATE_FULL);
