@@ -27,9 +27,6 @@
 
 # 📖 [Awesome_Books] <a name="Awesome_Books">Awesome_Books</a>
 
-# 📖 [Awesome-Books-Solo] <a name="Awesome-Books-Solo"></a>
-
-
 This is a Awesome-Books  project.
 "Awesome books" is a simple website that displays a list of books and allows you to add and remove books from that list.
 
@@ -51,9 +48,9 @@ This is a Awesome-Books  project.
 
 ### Key Features <a name="key-features"></a>
 
-- **[key_feature_1]** Awesome_Books built with HTML CSS and javascript
-- **[key_feature_2]** Dynamiccally loading with javascript.
-- **[key_feature_3]** Uses Local Storage as the database
+- Awesome_Books built with HTML CSS and javascript
+- Dynamiccally loading with javascript.
+- Uses Local Storage as a database
 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
@@ -67,9 +64,6 @@ This is a Awesome-Books  project.
  Clone this project to your local machine. 
 
 To get a local copy up and running, follow these steps.
-
-### Prerequisites
-Basic knownledge of computer.
 
 In order to run this project you need:
 live server.
@@ -104,8 +98,8 @@ npm test
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- **[future_feature_1]** Add a book added modal or pop-up when a new book is added
-- **[future_feature_2]** Add a book removed modal or pop-up when a book is removed
+- Add a book added modal or pop-up when a new book is added
+- Add a book removed modal or pop-up when a book is removed
  
 
 
@@ -130,7 +124,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- I would like to thank Microverse for the platfor to implement such a project
+- I would like to thank Microverse for the platform to implement such a project
 
 ## 📝 License
 
