@@ -99,11 +99,7 @@ npm test
 
 ## ⭐️ Show your support<a name="support"></a>
 
-If you like this project give a ⭐️.
-
-
-
-I would like to thank God Almighty and Microverse for the opportunity and motivation.
+To show your support, give this repository a star⭐️.
 
 
 ## 🤝 Contributing
@@ -112,13 +108,15 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
+
 ## Acknowledgments
 
-- I would like to thank Microverse for the platform to implement such a project
+- I would like to thank the Microverse student community
 
 ## 📝 License
 
